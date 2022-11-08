@@ -1,0 +1,41 @@
+{
+  "name": "alimentatec",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "test:e2e": "cypress open --browser chrome --e2e",
+    "coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint": "eslint --fix . --ext .js,.jsx",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "mathjs": "^11.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.27.1",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "cypress": "^10.11.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.5.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.10",
+    "happy-dom": "^7.6.6",
+    "prettier": "^2.7.1",
+    "vite": "^3.2.0",
+    "vitest": "^0.24.5"
+  }
+}
