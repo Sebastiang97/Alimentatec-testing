@@ -9,7 +9,7 @@
     "test": "vitest",
     "test:e2e": "cypress open --browser chrome --e2e",
     "coverage": "vitest run --coverage",
-    "preview": "vite preview",
+    "preview": "vite preview --port 5173",
     "format": "prettier --write .",
     "lint": "eslint --fix . --ext .js,.jsx",
     "cypress:open": "cypress open"

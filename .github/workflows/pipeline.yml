@@ -92,6 +92,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           command: npm run test:e2e
+          start: npm run preview
           wait-on: http://localhost:5173/
 
   deploy:
