@@ -94,3 +94,26 @@ jobs:
           command: npm run test:e2e
           start: npm run preview
           wait-on: http://localhost:5173/
+
+  deploy:
+    needs: [lint, build, e2e]
+    runs-on: ubuntu-latest
+    concurrency: ci-${{github. ref}}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          cache: 'npm'
+          node-version: '14'
+      - name: Install dependencies
+        run: npm ci
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+      - name: Deploy
+        uses: James Ives/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
